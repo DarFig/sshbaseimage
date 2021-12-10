@@ -15,7 +15,7 @@ LABEL manteiner="https://github.com/DarFig"
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     apt-get install -y htop vim nano && \
-    apt-get install -y openssh-server iputils-ping 
+    apt-get install -y openssh-server iputils-ping && \
 
 #     
 ADD run.sh /run.sh
@@ -34,7 +34,7 @@ ADD common-auth /etc/pam.d/common-auth
 ADD nsswitch.conf /etc/nsswitch.conf
 
 
-#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential apt-utils &&\
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential apt-utils
 #    apt-get install -y nscd ldap-utils &&\
 #    DEBIAN_FRONTEND=noninteractive apt-get install -y -q ldap-auth-client
 

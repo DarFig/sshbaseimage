@@ -9,11 +9,11 @@ echo "ldap_version $LDAP_VERSION" >> /etc/ldap.conf
 echo "pam_password $PAM_PASSWORD" >> /etc/ldap.conf
 
 echo $LDAP_BASE
-DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential apt-utils
 apt-get install -y nscd ldap-utils
-DEBIAN_FRONTEND=noninteractive apt-get install -y -q ldap-auth-client
+DEBIAN_FRONTEND=noninteractive 
+apt-get install -y -q ldap-auth-client
 
-#start serices
+#start services
 service ssh start
 service nscd start
 systemctl enable nscd
