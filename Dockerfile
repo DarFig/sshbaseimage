@@ -23,9 +23,9 @@ RUN chmod a+x /run.sh
 
 #env-var
 ENV LDAP_URI="ldap://"
-    LDAP_BASE="dc=default,dc=com"
-    LDAP_VERSION="3"
-    PAM_PASSWORD="md5"
+ENV LDAP_BASE="dc=default,dc=com"
+ENV LDAP_VERSION="3"
+ENV PAM_PASSWORD="md5"
 
 # config
 RUN touch /etc/ldap.conf
