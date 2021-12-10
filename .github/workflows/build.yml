@@ -15,7 +15,7 @@ jobs:
       id: prep
       run: |
         REGISTRY="ghcr.io"
-        IMAGE="${REGISTRY}/tici3a/condor${{ steps.extract_branch.outputs.branch }}"
+        IMAGE="${REGISTRY}/darfig/sshbaseimage"
         TAGS="${IMAGE}:${{ steps.extract_branch.outputs.branch }}"
         if [[ $GITHUB_REF == refs/heads/master || $GITHUB_REF == refs/heads/main ]]; then
           TAGS="${IMAGE}:latest"
