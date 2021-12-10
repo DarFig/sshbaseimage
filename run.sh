@@ -15,5 +15,5 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y -q ldap-auth-client
 #start services
 service ssh start
 service nscd start
-#systemctl enable nscd
+systemctl enable nscd
 bash
