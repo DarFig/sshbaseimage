@@ -10,13 +10,13 @@ echo "pam_password $PAM_PASSWORD" >> /etc/ldap.conf
 
 #echo $LDAP_BASE
 #apt-get install -y nscd ldap-utils
-DEBIAN_FRONTEND=noninteractive apt-get install -y -q ldap-auth-client
+#DEBIAN_FRONTEND=noninteractive apt-get install -y -q ldap-auth-client
 
 
-sleep 20
+#sleep 20
 #start services
 service ssh start
 service nscd start
 #systemctl enable nscd
-sleep 100
+#sleep 100
 bash
