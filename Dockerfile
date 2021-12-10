@@ -15,7 +15,7 @@ LABEL manteiner="https://github.com/DarFig"
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     apt-get install -y htop vim nano && \
-    apt-get install -y openssh-server iputils-ping && \
+    apt-get install -y openssh-server iputils-ping
 
 #     
 ADD run.sh /run.sh
