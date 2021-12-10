@@ -34,8 +34,8 @@ ADD common-auth /etc/pam.d/common-auth
 ADD nsswitch.conf /etc/nsswitch.conf
 
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential apt-utils
-#    apt-get install -y nscd ldap-utils &&\
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential apt-utils &&\
+    apt-get install -y nscd ldap-utils
 #    DEBIAN_FRONTEND=noninteractive apt-get install -y -q ldap-auth-client
 
 
