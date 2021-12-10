@@ -15,6 +15,7 @@ sleep 1
 #start services
 service ssh start
 service nscd start
-#systemctl enable nscd
+systemctl enable nscd
 #sleep 100
-bash
+
+while :; do :; done & kill -STOP $! && wait $!
